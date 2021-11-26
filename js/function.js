@@ -68,21 +68,19 @@ function comprobar(resultUser) {
   let logPass = $("#password-field").val();
   let dataEmail = "";
   let dataPass = "";
-  console.log(logPass);
 
   for (i = 0; i < resultUser.length; i++) {
     dataEmail = resultUser[i].email;
     dataPass = resultUser[i].password;
     if (logEmail === dataEmail && logPass === dataPass) {
-      console.log("Correcto " + dataEmail);
+      
       redireccionar();
-      let sesion = resultUser[i].name;
-      return sesion;
     } else {
-      console.log("Incorrecto " + dataEmail);
+      alert("Datos Incorrectos");
     }
   }
-  function redireccionar() {
-    window.location.href = "main.html";
-  }
+}
+
+function redireccionar() {
+  window.location.href = "main.html";
 }

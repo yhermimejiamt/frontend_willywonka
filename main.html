@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/function.js"></script>
   </head>
-  <body class="img js-fullheight" style="background-image:
-    url(images/bg2.png);">
+  <body class="img js-fullheight" style="background-image:url(images/bg2.png);">
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <!-- Brand -->
       <a class="navbar-brand" href="#">WILLY WONKA</a>
@@ -52,19 +51,27 @@
         <div class="row justify-content-center">
           <div class="col-md-12 text-center mb-1">
             <h1>Bienvenido</h1>
+            <div id="resultado1"></div>
+            </div>
           </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6 col-lg-4">
-            <div class="login-wrap p-0">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="login-wrap p-0">
 
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        <div id="greeting"></div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
-</html>
+    <script type="text/javascript">  
+        $(function () {  
+            var name = 'Welcome ' + ' <%= Session["UserName"] %>'  
+            $('#email').text(name)  
+        });
+    </script>
+      </section>
+      <script src="js/function.js"></script>
+      <script src="js/jquery.min.js"></script>
+    </body>
+  </html>
